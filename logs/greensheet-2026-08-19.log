@@ -1,0 +1,68 @@
+2026-08-19 13:26:45,745 | INFO | ======================================
+2026-08-19 13:26:45,745 | INFO | Starting Green Sheet weekly import
+2026-08-19 13:26:45,745 | INFO | Starting Chromium...
+2026-08-19 13:26:47,562 | INFO | Logging into Green Sheet...
+2026-08-19 13:26:47,562 | INFO | Opening Green Sheet login...
+2026-08-19 13:27:48,928 | ERROR | Green Sheet import FAILED: Page.fill: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator("input[name='username']")
+    - waiting for "https://greensheet.ca/members/main-menu.php" navigation to finish...
+    - navigated to "https://greensheet.ca/members/main-menu.php"
+Traceback (most recent call last):
+  File "C:\Users\mxu\source\greensheet\main.py", line 96, in main
+    client.login()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\mxu\source\greensheet\greensheet_client.py", line 87, in login
+    self.page.fill(
+    ~~~~~~~~~~~~~~^
+        "input[name='username']",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        GREENSHEET_USERNAME
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\mxu\source\greensheet\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 11295, in fill
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.fill(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\mxu\source\greensheet\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\mxu\source\greensheet\.venv\Lib\site-packages\playwright\_impl\_page.py", line 928, in fill
+    return await self._main_frame.fill(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mxu\source\greensheet\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 636, in fill
+    await self._fill(**locals_to_params(locals()))
+  File "C:\Users\mxu\source\greensheet\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 648, in _fill
+    await self._channel.send("fill", self._timeout, locals_to_params(locals()))
+  File "C:\Users\mxu\source\greensheet\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mxu\source\greensheet\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.fill: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator("input[name='username']")
+    - waiting for "https://greensheet.ca/members/main-menu.php" navigation to finish...
+    - navigated to "https://greensheet.ca/members/main-menu.php"
+
+2026-08-19 13:27:48,935 | INFO | Closing browser...
+2026-08-19 13:31:07,909 | INFO | ======================================
+2026-08-19 13:31:07,909 | INFO | Starting Green Sheet weekly import
+2026-08-19 13:31:07,910 | INFO | Starting Chromium...
+2026-08-19 13:31:09,079 | INFO | Logging into Green Sheet...
+2026-08-19 13:31:09,080 | INFO | Opening Green Sheet login...
+2026-08-19 13:31:10,228 | INFO | Current URL: https://greensheet.ca/login.php
+2026-08-19 13:33:52,064 | INFO | Fetching Projects...
+2026-08-19 13:33:52,065 | INFO | Opening Projects...
+2026-08-19 13:33:53,546 | INFO | Downloading Projects CSV...
+2026-08-19 13:33:57,256 | INFO | Closing browser...

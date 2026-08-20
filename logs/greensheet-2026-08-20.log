@@ -1,0 +1,971 @@
+2026-08-20 06:53:53,980 | INFO | ======================================
+2026-08-20 06:53:53,980 | INFO | Starting Green Sheet weekly import
+2026-08-20 06:53:53,980 | INFO | Starting Chromium...
+2026-08-20 06:53:56,006 | ERROR | Green Sheet import FAILED: BrowserType.launch: Executable doesn't exist at C:\Users\mxudo\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 86, in main
+    client.start()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 46, in start
+    self.playwright.chromium.launch(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        headless=HEADLESS
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 16702, in launch
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.launch(
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<17 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_browser_type.py", line 97, in launch
+    await self._channel.send(
+        "launch", TimeoutSettings.launch_timeout, params
+    )
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: BrowserType.launch: Executable doesn't exist at C:\Users\mxudo\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-08-20 06:53:56,008 | INFO | Closing browser...
+2026-08-20 06:55:47,458 | INFO | ======================================
+2026-08-20 06:55:47,459 | INFO | Starting Green Sheet weekly import
+2026-08-20 06:55:47,459 | INFO | Starting Chromium...
+2026-08-20 06:55:48,610 | INFO | Logging into Green Sheet...
+2026-08-20 06:55:48,611 | INFO | Opening Green Sheet login...
+2026-08-20 06:56:49,475 | ERROR | Green Sheet import FAILED: Locator.fill: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator("input[name='username']")
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 96, in main
+    client.login()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 82, in login
+    ).fill(
+      ~~~~^
+        GREENSHEET_USERNAME
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 18242, in fill
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.fill(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_locator.py", line 219, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 636, in fill
+    await self._fill(**locals_to_params(locals()))
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 648, in _fill
+    await self._channel.send("fill", self._timeout, locals_to_params(locals()))
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator("input[name='username']")
+
+2026-08-20 06:56:49,478 | INFO | Closing browser...
+2026-08-20 07:05:14,272 | INFO | ======================================
+2026-08-20 07:05:14,272 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:05:14,272 | INFO | Starting Chromium...
+2026-08-20 07:05:14,898 | INFO | Logging into Green Sheet...
+2026-08-20 07:05:17,029 | INFO | Fetching Projects...
+2026-08-20 07:05:17,029 | INFO | Opening Projects...
+2026-08-20 07:05:18,108 | INFO | Downloading Projects CSV...
+2026-08-20 07:06:18,114 | ERROR | Green Sheet import FAILED: Locator.click: Timeout 60000ms exceeded.
+Call log:
+  - waiting for get_by_text("CSV", exact=True)
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 107, in main
+    client.download_projects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 152, in download_projects
+    ).click()
+      ~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 60000ms exceeded.
+Call log:
+  - waiting for get_by_text("CSV", exact=True)
+
+2026-08-20 07:06:18,115 | INFO | Closing browser...
+2026-08-20 07:12:24,111 | INFO | ======================================
+2026-08-20 07:12:24,112 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:12:24,112 | INFO | Starting Chromium...
+2026-08-20 07:12:24,789 | INFO | Logging into Green Sheet...
+2026-08-20 07:12:26,679 | INFO | Fetching Projects...
+2026-08-20 07:12:26,679 | INFO | Opening Projects...
+2026-08-20 07:12:29,260 | INFO | Projects page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 07:12:29,260 | INFO | Looking for Projects CSV export...
+2026-08-20 07:12:29,261 | ERROR | Green Sheet import FAILED: name 're' is not defined
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 107, in main
+    client.download_projects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 156, in download_projects
+    name=re.compile(r"csv", re.I),
+         ^^
+NameError: name 're' is not defined. Did you forget to import 're'?
+2026-08-20 07:12:29,262 | INFO | Closing browser...
+2026-08-20 07:13:14,958 | INFO | ======================================
+2026-08-20 07:13:14,958 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:13:14,958 | INFO | Starting Chromium...
+2026-08-20 07:13:15,580 | INFO | Logging into Green Sheet...
+2026-08-20 07:13:17,469 | INFO | Fetching Projects...
+2026-08-20 07:13:17,469 | INFO | Opening Projects...
+2026-08-20 07:13:19,985 | INFO | Projects page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 07:13:19,986 | INFO | Looking for Projects CSV export...
+2026-08-20 07:13:20,015 | ERROR | Could not find a visible CSV download control.
+2026-08-20 07:13:20,016 | INFO | Visible links/buttons on page:
+2026-08-20 07:13:20,036 | INFO | Control 1: text='' href='#'
+2026-08-20 07:13:20,043 | INFO | Control 2: text='Home' href='main-menu.php'
+2026-08-20 07:13:20,049 | INFO | Control 3: text='My Data' href='#'
+2026-08-20 07:13:20,069 | INFO | Control 11: text='Contact' href='contact.php'
+2026-08-20 07:13:20,074 | INFO | Control 12: text='Logoff' href='/login.php?logoff=true'
+2026-08-20 07:13:20,081 | INFO | Control 13: text='Issue' href='project_results.php?button_clicked=btn_basic&do=bids1'
+2026-08-20 07:13:20,087 | INFO | Control 14: text='Search' href='project.php?do=bids1'
+2026-08-20 07:13:20,094 | INFO | Control 15: text='Issue' href='project_results.php?button_clicked=btn_basic&do=bids2'
+2026-08-20 07:13:20,101 | INFO | Control 16: text='Search' href='project.php?do=bids2'
+2026-08-20 07:13:20,108 | INFO | Control 17: text='Issue' href='project_results.php?button_clicked=btn_basic&do=bids3'
+2026-08-20 07:13:20,116 | INFO | Control 18: text='Search' href='project.php?do=bids3'
+2026-08-20 07:13:20,123 | INFO | Control 19: text='Issue' href='project_results.php?button_clicked=btn_basic&do=bids4'
+2026-08-20 07:13:20,130 | INFO | Control 20: text='Search' href='project.php?do=bids4'
+2026-08-20 07:13:20,137 | INFO | Control 21: text='Issue' href='project_results.php?button_clicked=btn_basic&do=bidsall'
+2026-08-20 07:13:20,144 | INFO | Control 22: text='Search' href='project.php?do=bidsall'
+2026-08-20 07:13:20,150 | INFO | Control 23: text='Issue' href='project_results.php?button_clicked=btn_basic&do=projects1'
+2026-08-20 07:13:20,156 | INFO | Control 24: text='Search' href='project.php?do=projects1'
+2026-08-20 07:13:20,163 | INFO | Control 25: text='Issue' href='project_results.php?button_clicked=btn_basic&do=projects2'
+2026-08-20 07:13:20,169 | INFO | Control 26: text='Search' href='project.php?do=projects2'
+2026-08-20 07:13:20,175 | INFO | Control 27: text='Issue' href='project_results.php?button_clicked=btn_basic&do=projects3'
+2026-08-20 07:13:20,181 | INFO | Control 28: text='Search' href='project.php?do=projects3'
+2026-08-20 07:13:20,187 | INFO | Control 29: text='Issue' href='project_results.php?button_clicked=btn_basic&do=projects4'
+2026-08-20 07:13:20,193 | INFO | Control 30: text='Search' href='project.php?do=projects4'
+2026-08-20 07:13:20,199 | INFO | Control 31: text='Issue' href='project_results.php?button_clicked=btn_basic&do=projectsall'
+2026-08-20 07:13:20,204 | INFO | Control 32: text='Search' href='project.php?do=projectsall'
+2026-08-20 07:13:20,211 | INFO | Control 33: text='Issue' href='zone_results.php?zone=zone1&BASIC_x=Basic+Search'
+2026-08-20 07:13:20,217 | INFO | Control 34: text='Search' href='zones.php?zone=zone1'
+2026-08-20 07:13:20,224 | INFO | Control 35: text='Issue' href='zone_results.php?zone=zone2&BASIC_x=Basic+Search'
+2026-08-20 07:13:20,231 | INFO | Control 36: text='Search' href='zones.php?zone=zone2'
+2026-08-20 07:13:20,236 | INFO | Control 37: text='Issue' href='zone_results.php?zone=zone3&BASIC_x=Basic+Search'
+2026-08-20 07:13:20,242 | INFO | Control 38: text='Search' href='zones.php?zone=zone3'
+2026-08-20 07:13:20,248 | INFO | Control 39: text='Issue' href='zone_results.php?zone=zone4&BASIC_x=Basic+Search'
+2026-08-20 07:13:20,256 | INFO | Control 40: text='Search' href='zones.php?zone=zone4'
+2026-08-20 07:13:20,266 | INFO | Control 41: text='Issue' href='zone_results.php?zone=zoneall&BASIC_x=Basic+Search'
+2026-08-20 07:13:20,273 | INFO | Control 42: text='Search' href='zones.php?zone=zoneall'
+2026-08-20 07:13:20,273 | ERROR | Green Sheet import FAILED: Could not find the CSV download button/link on the Projects page.
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 107, in main
+    client.download_projects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 256, in download_projects
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Could not find the CSV download button/link on the Projects page.
+2026-08-20 07:13:20,273 | INFO | Closing browser...
+2026-08-20 07:15:07,925 | INFO | ======================================
+2026-08-20 07:15:07,925 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:15:07,925 | INFO | Starting Chromium...
+2026-08-20 07:15:08,521 | INFO | Logging into Green Sheet...
+2026-08-20 07:15:10,462 | INFO | Fetching Projects...
+2026-08-20 07:15:10,462 | INFO | Opening Green Sheet Projects...
+2026-08-20 07:15:10,954 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 07:15:10,954 | INFO | Opening All Projects results...
+2026-08-20 07:15:15,035 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 07:15:15,035 | INFO | Looking for CSV export...
+2026-08-20 07:15:17,429 | INFO | Found CSV candidate: text='Excel / CSV' href='' name='' id='viewexcel'
+2026-08-20 07:15:17,430 | INFO | Downloading Projects CSV...
+2026-08-20 07:16:17,435 | ERROR | Green Sheet import FAILED: Timeout 60000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 107, in main
+    client.download_projects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 322, in download_projects
+    with self.page.expect_download(
+         ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        timeout=60000
+        ^^^^^^^^^^^^^
+    ) as info:
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 60000ms exceeded while waiting for event "download"
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+2026-08-20 07:16:17,438 | INFO | Closing browser...
+2026-08-20 07:20:35,159 | INFO | ======================================
+2026-08-20 07:20:35,159 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:20:35,159 | INFO | Starting Chromium...
+2026-08-20 07:20:35,773 | INFO | Logging into Green Sheet...
+2026-08-20 07:20:37,613 | INFO | Fetching Projects...
+2026-08-20 07:20:37,614 | INFO | Opening Green Sheet Projects...
+2026-08-20 07:20:38,128 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 07:20:38,129 | INFO | Opening All Projects results...
+2026-08-20 07:20:40,830 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 07:20:40,830 | INFO | Looking for CSV export...
+2026-08-20 07:20:43,233 | INFO | Found CSV candidate: text='Excel / CSV' href='' name='' id='viewexcel'
+2026-08-20 07:20:43,233 | INFO | Opening Excel / CSV export...
+2026-08-20 07:20:48,241 | INFO | No direct download event detected; checking page navigation/export response...
+2026-08-20 07:20:48,241 | ERROR | Green Sheet import FAILED: cannot access local variable 'download' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 107, in main
+    client.download_projects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 370, in download_projects
+    download.save_as(
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'download' where it is not associated with a value
+2026-08-20 07:20:48,242 | INFO | Closing browser...
+2026-08-20 07:26:50,202 | INFO | ======================================
+2026-08-20 07:26:50,202 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:26:50,202 | INFO | Starting Chromium...
+2026-08-20 07:26:50,827 | INFO | Logging into Green Sheet...
+2026-08-20 07:26:52,590 | INFO | Fetching Projects...
+2026-08-20 07:26:52,591 | INFO | Opening Green Sheet Projects...
+2026-08-20 07:26:53,101 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 07:26:53,101 | INFO | Opening All Projects results...
+2026-08-20 07:26:55,888 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 07:26:55,888 | INFO | Looking for CSV export...
+2026-08-20 07:26:55,954 | INFO | Found CSV candidate: text='Excel / CSV ' href=None name=None id='viewexcel'
+2026-08-20 07:26:55,954 | INFO | Opening Excel / CSV export...
+2026-08-20 07:27:00,962 | INFO | No direct download event detected; checking page navigation/export behavior...
+2026-08-20 07:27:03,967 | INFO | URL after Excel / CSV click: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 07:27:03,997 | INFO | CSV tag: A
+2026-08-20 07:27:04,003 | INFO | CSV outerHTML: <a class="btn btn-labeled btn-zone4" onclick="javascript:CheckSelectBoxes(); return false;" id="viewexcel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Designed for creating databases and adding personal notes">
+                  Download Excel
+                  <span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                </a>
+2026-08-20 07:27:04,003 | INFO | Excel / CSV action navigated to another page.
+2026-08-20 07:27:04,003 | ERROR | Green Sheet import FAILED: Excel / CSV did not trigger a normal browser download. Check the logged CSV outerHTML and resulting URL.
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 107, in main
+    client.download_projects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 322, in download_projects
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: Excel / CSV did not trigger a normal browser download. Check the logged CSV outerHTML and resulting URL.
+2026-08-20 07:27:04,004 | INFO | Closing browser...
+2026-08-20 07:29:50,639 | INFO | ======================================
+2026-08-20 07:29:50,640 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:29:50,640 | INFO | Starting Chromium...
+2026-08-20 07:29:51,232 | INFO | Logging into Green Sheet...
+2026-08-20 07:29:53,128 | INFO | Fetching Projects...
+2026-08-20 07:29:53,128 | INFO | Opening Green Sheet Projects...
+2026-08-20 07:29:53,636 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 07:29:53,636 | INFO | Opening All Projects results...
+2026-08-20 07:29:56,481 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 07:29:56,481 | INFO | Opening Excel / CSV export page...
+2026-08-20 07:29:56,741 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 07:29:58,254 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 07:29:58,399 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 07:29:58,399 | INFO | Starting final Projects download...
+2026-08-20 07:29:59,124 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-072958.csv
+2026-08-20 07:29:59,124 | INFO | Fetching Building Permits...
+2026-08-20 07:29:59,124 | INFO | Opening Building Permits...
+2026-08-20 07:29:59,742 | INFO | Downloading Permits CSV...
+2026-08-20 07:30:59,747 | ERROR | Green Sheet import FAILED: Locator.click: Timeout 60000ms exceeded.
+Call log:
+  - waiting for get_by_text("CSV", exact=True)
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 119, in main
+    client.download_permits()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 464, in download_permits
+    ).click()
+      ~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 60000ms exceeded.
+Call log:
+  - waiting for get_by_text("CSV", exact=True)
+
+2026-08-20 07:30:59,749 | INFO | Closing browser...
+2026-08-20 07:47:01,771 | INFO | ======================================
+2026-08-20 07:47:01,771 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:47:01,771 | INFO | Starting Chromium...
+2026-08-20 07:47:02,369 | INFO | Logging into Green Sheet...
+2026-08-20 07:47:04,223 | INFO | Fetching Projects...
+2026-08-20 07:47:04,224 | INFO | Opening Green Sheet Projects...
+2026-08-20 07:47:04,736 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 07:47:04,737 | INFO | Opening All Projects results...
+2026-08-20 07:47:07,462 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 07:47:07,463 | INFO | Opening Excel / CSV export page...
+2026-08-20 07:47:07,722 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 07:47:09,226 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 07:47:09,352 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 07:47:09,352 | INFO | Starting final Projects download...
+2026-08-20 07:47:09,860 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-074709.csv
+2026-08-20 07:47:09,860 | INFO | Fetching Building Permits...
+2026-08-20 07:47:09,861 | INFO | Opening Green Sheet Permits...
+2026-08-20 07:47:11,974 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 07:47:11,974 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 07:47:11,990 | ERROR | Could not find a visible Permit Excel / CSV export control.
+2026-08-20 07:47:11,993 | ERROR | Green Sheet import FAILED: Could not find the Permit Excel / CSV export control.
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 119, in main
+    client.download_permits()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 594, in download_permits
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Could not find the Permit Excel / CSV export control.
+2026-08-20 07:47:11,994 | INFO | Closing browser...
+2026-08-20 07:53:35,365 | INFO | ======================================
+2026-08-20 07:53:35,365 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:53:35,365 | INFO | Starting Chromium...
+2026-08-20 07:53:35,984 | INFO | Logging into Green Sheet...
+2026-08-20 07:53:37,882 | INFO | Fetching Projects...
+2026-08-20 07:53:37,882 | INFO | Opening Green Sheet Projects...
+2026-08-20 07:53:38,374 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 07:53:38,375 | INFO | Opening All Projects results...
+2026-08-20 07:53:41,105 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 07:53:41,105 | INFO | Opening Excel / CSV export page...
+2026-08-20 07:53:41,398 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 07:53:42,911 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 07:53:43,035 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 07:53:43,035 | INFO | Starting final Projects download...
+2026-08-20 07:53:43,578 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-075343.csv
+2026-08-20 07:53:43,578 | INFO | Fetching Building Permits...
+2026-08-20 07:53:43,578 | INFO | Opening Green Sheet Permits...
+2026-08-20 07:53:45,684 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 07:53:45,686 | INFO | Permit page title: 
+2026-08-20 07:53:45,699 | INFO | Permit page text preview: "Sorry, problem loading page, must supply a request[zone]. window.location.href = '/members/main-menu.php';"
+2026-08-20 07:53:45,699 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 07:53:45,701 | ERROR | Could not find a visible Permit Excel / CSV export control.
+2026-08-20 07:53:45,701 | INFO | Current Permit URL: https://greensheet.ca/members/zone_results.php?SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 07:53:45,703 | INFO | Permit page controls found: 0
+2026-08-20 07:53:45,706 | INFO | Permit forms found: 0
+2026-08-20 07:53:45,707 | ERROR | Green Sheet import FAILED: Could not find Permit export control. Check the logged Permit page text, controls, and forms.
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 119, in main
+    client.download_permits()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\greensheet_client.py", line 677, in download_permits
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: Could not find Permit export control. Check the logged Permit page text, controls, and forms.
+2026-08-20 07:53:45,708 | INFO | Closing browser...
+2026-08-20 07:55:37,794 | INFO | ======================================
+2026-08-20 07:55:37,795 | INFO | Starting Green Sheet weekly import
+2026-08-20 07:55:37,795 | INFO | Starting Chromium...
+2026-08-20 07:55:38,520 | INFO | Logging into Green Sheet...
+2026-08-20 07:55:40,382 | INFO | Fetching Projects...
+2026-08-20 07:55:40,383 | INFO | Opening Green Sheet Projects...
+2026-08-20 07:55:40,893 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 07:55:40,893 | INFO | Opening All Projects results...
+2026-08-20 07:55:43,640 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 07:55:43,640 | INFO | Opening Excel / CSV export page...
+2026-08-20 07:55:43,901 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 07:55:45,412 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 07:55:45,551 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 07:55:45,551 | INFO | Starting final Projects download...
+2026-08-20 07:55:46,064 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-075545.csv
+2026-08-20 07:55:46,065 | INFO | Fetching Building Permits...
+2026-08-20 07:55:46,065 | INFO | Opening Green Sheet Permits...
+2026-08-20 07:55:48,343 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 07:55:48,346 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 07:55:48,368 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 07:55:48,368 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 07:55:48,756 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 07:55:48,776 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 07:55:48,776 | INFO | Opening Permit export...
+2026-08-20 07:55:49,041 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-075548.csv
+2026-08-20 07:55:49,041 | INFO | Normalizing Projects...
+2026-08-20 07:55:49,059 | ERROR | Green Sheet import FAILED: Error tokenizing data. C error: Expected 1 fields in line 11, saw 4
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 130, in main
+    projects = normalize_projects(
+        project_file
+    )
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\parser.py", line 50, in normalize_projects
+    df = pd.read_csv(filename)
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py", line 306, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py", line 1947, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 215, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 832, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 897, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 868, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 885, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2084, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 1 fields in line 11, saw 4
+
+2026-08-20 07:55:49,064 | INFO | Closing browser...
+2026-08-20 08:04:27,747 | INFO | ======================================
+2026-08-20 08:04:27,748 | INFO | Starting Green Sheet weekly import
+2026-08-20 08:04:27,748 | INFO | Starting Chromium...
+2026-08-20 08:04:28,394 | INFO | Logging into Green Sheet...
+2026-08-20 08:04:30,261 | INFO | Fetching Projects...
+2026-08-20 08:04:30,261 | INFO | Opening Green Sheet Projects...
+2026-08-20 08:04:30,764 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 08:04:30,764 | INFO | Opening All Projects results...
+2026-08-20 08:04:33,508 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 08:04:33,508 | INFO | Opening Excel / CSV export page...
+2026-08-20 08:04:33,775 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 08:04:35,285 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 08:04:35,419 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 08:04:35,419 | INFO | Starting final Projects download...
+2026-08-20 08:04:35,963 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-080435.xls
+2026-08-20 08:04:35,963 | INFO | Fetching Building Permits...
+2026-08-20 08:04:35,963 | INFO | Opening Green Sheet Permits...
+2026-08-20 08:04:38,192 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 08:04:38,197 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 08:04:38,217 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 08:04:38,217 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 08:04:38,599 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 08:04:38,618 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 08:04:38,619 | INFO | Opening Permit export...
+2026-08-20 08:04:38,857 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-080438.xls
+2026-08-20 08:04:38,857 | INFO | Normalizing Projects...
+2026-08-20 08:04:38,871 | ERROR | Green Sheet import FAILED: Excel file format cannot be determined, you must specify an engine manually.
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 130, in main
+    projects = normalize_projects(
+        project_file
+    )
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\parser.py", line 65, in normalize_projects
+    df = read_greensheet_file(filename)
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\parser.py", line 54, in read_greensheet_file
+    return pd.read_excel(filename)
+           ~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_base.py", line 481, in read_excel
+    io = ExcelFile(
+        io,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_base.py", line 1608, in __init__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Excel file format cannot be determined, you must specify an engine manually.
+2026-08-20 08:04:38,873 | INFO | Closing browser...
+2026-08-20 08:08:17,632 | INFO | ======================================
+2026-08-20 08:08:17,633 | INFO | Starting Green Sheet weekly import
+2026-08-20 08:08:17,633 | INFO | Starting Chromium...
+2026-08-20 08:08:18,234 | INFO | Logging into Green Sheet...
+2026-08-20 08:08:20,088 | INFO | Fetching Projects...
+2026-08-20 08:08:20,088 | INFO | Opening Green Sheet Projects...
+2026-08-20 08:08:20,596 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 08:08:20,596 | INFO | Opening All Projects results...
+2026-08-20 08:08:23,308 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 08:08:23,308 | INFO | Opening Excel / CSV export page...
+2026-08-20 08:08:23,585 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 08:08:25,098 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 08:08:25,231 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 08:08:25,231 | INFO | Starting final Projects download...
+2026-08-20 08:08:25,776 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-080825.xls
+2026-08-20 08:08:25,777 | INFO | Fetching Building Permits...
+2026-08-20 08:08:25,777 | INFO | Opening Green Sheet Permits...
+2026-08-20 08:08:28,013 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 08:08:28,015 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 08:08:28,031 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 08:08:28,031 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 08:08:28,416 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 08:08:28,435 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 08:08:28,435 | INFO | Opening Permit export...
+2026-08-20 08:08:28,672 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-080828.xls
+2026-08-20 08:08:28,672 | INFO | Normalizing Projects...
+2026-08-20 08:08:28,685 | ERROR | Green Sheet import FAILED: `Import lxml` failed.  Use pip or conda to install the lxml package.
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\compat\_optional.py", line 158, in import_optional_dependency
+    module = importlib.import_module(name)
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'lxml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 130, in main
+    projects = normalize_projects(
+        project_file
+    )
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\parser.py", line 126, in normalize_projects
+    df = read_greensheet_file(filename)
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\parser.py", line 96, in read_greensheet_file
+    tables = pd.read_html(
+        filename
+    )
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\html.py", line 1226, in read_html
+    return _parse(
+        flavor=flavor,
+    ...<16 lines>...
+        storage_options=storage_options,
+    )
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\html.py", line 967, in _parse
+    parser = _parser_dispatch(flav)
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\html.py", line 914, in _parser_dispatch
+    import_optional_dependency("lxml.etree")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\compat\_optional.py", line 161, in import_optional_dependency
+    raise ImportError(msg) from err
+ImportError: `Import lxml` failed.  Use pip or conda to install the lxml package.
+2026-08-20 08:08:28,698 | INFO | Closing browser...
+2026-08-20 08:09:49,945 | INFO | ======================================
+2026-08-20 08:09:49,946 | INFO | Starting Green Sheet weekly import
+2026-08-20 08:09:49,946 | INFO | Starting Chromium...
+2026-08-20 08:09:50,573 | INFO | Logging into Green Sheet...
+2026-08-20 08:09:52,465 | INFO | Fetching Projects...
+2026-08-20 08:09:52,466 | INFO | Opening Green Sheet Projects...
+2026-08-20 08:09:53,027 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 08:09:53,027 | INFO | Opening All Projects results...
+2026-08-20 08:09:55,848 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 08:09:55,848 | INFO | Opening Excel / CSV export page...
+2026-08-20 08:09:56,113 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 08:09:57,623 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 08:09:57,769 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 08:09:57,769 | INFO | Starting final Projects download...
+2026-08-20 08:09:58,304 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-080957.xls
+2026-08-20 08:09:58,304 | INFO | Fetching Building Permits...
+2026-08-20 08:09:58,304 | INFO | Opening Green Sheet Permits...
+2026-08-20 08:10:00,549 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 08:10:00,552 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 08:10:00,571 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 08:10:00,571 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 08:10:00,940 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 08:10:00,958 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 08:10:00,958 | INFO | Opening Permit export...
+2026-08-20 08:10:01,222 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-081001.xls
+2026-08-20 08:10:01,222 | INFO | Normalizing Projects...
+2026-08-20 08:10:01,292 | ERROR | Green Sheet import FAILED: Can only use .str accessor with string values, not integer
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 130, in main
+    projects = normalize_projects(
+        project_file
+    )
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\parser.py", line 128, in normalize_projects
+    df = clean_column_names(df)
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\parser.py", line 9, in clean_column_names
+    .str.strip()
+     ^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not integer
+2026-08-20 08:10:01,294 | INFO | Closing browser...
+2026-08-20 08:12:52,718 | INFO | ======================================
+2026-08-20 08:12:52,718 | INFO | Starting Green Sheet weekly import
+2026-08-20 08:12:52,719 | INFO | Starting Chromium...
+2026-08-20 08:12:53,325 | INFO | Logging into Green Sheet...
+2026-08-20 08:12:55,141 | INFO | Fetching Projects...
+2026-08-20 08:12:55,141 | INFO | Opening Green Sheet Projects...
+2026-08-20 08:12:55,638 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 08:12:55,638 | INFO | Opening All Projects results...
+2026-08-20 08:12:58,362 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 08:12:58,362 | INFO | Opening Excel / CSV export page...
+2026-08-20 08:12:58,621 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 08:13:00,131 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 08:13:00,283 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 08:13:00,283 | INFO | Starting final Projects download...
+2026-08-20 08:13:00,827 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-081300.xls
+2026-08-20 08:13:00,827 | INFO | Fetching Building Permits...
+2026-08-20 08:13:00,827 | INFO | Opening Green Sheet Permits...
+2026-08-20 08:13:03,063 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 08:13:03,066 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 08:13:03,082 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 08:13:03,083 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 08:13:03,455 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 08:13:03,474 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 08:13:03,474 | INFO | Opening Permit export...
+2026-08-20 08:13:03,729 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-081303.xls
+2026-08-20 08:13:03,730 | INFO | Normalizing Projects...
+2026-08-20 08:13:03,807 | INFO | Projects found: 0
+2026-08-20 08:13:03,807 | INFO | Normalizing Permits...
+2026-08-20 08:13:03,830 | INFO | Permits found: 0
+2026-08-20 08:13:03,852 | ERROR | Green Sheet import FAILED: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 160, in main
+    database.connect()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\database.py", line 45, in connect
+    self.connection = pyodbc.connect(
+                      ~~~~~~~~~~~~~~^
+        connection_string
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.InterfaceError: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+2026-08-20 08:13:03,853 | INFO | Closing browser...
+2026-08-20 08:32:52,764 | INFO | ======================================
+2026-08-20 08:32:52,764 | INFO | Starting Green Sheet weekly import
+2026-08-20 08:32:52,764 | INFO | Starting Chromium...
+2026-08-20 08:32:53,849 | INFO | Logging into Green Sheet...
+2026-08-20 08:32:55,891 | INFO | Fetching Projects...
+2026-08-20 08:32:55,891 | INFO | Opening Green Sheet Projects...
+2026-08-20 08:32:56,416 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 08:32:56,416 | INFO | Opening All Projects results...
+2026-08-20 08:32:59,160 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 08:32:59,161 | INFO | Opening Excel / CSV export page...
+2026-08-20 08:32:59,433 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 08:33:00,945 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 08:33:01,083 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 08:33:01,083 | INFO | Starting final Projects download...
+2026-08-20 08:33:02,666 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-083302.xls
+2026-08-20 08:33:02,666 | INFO | Fetching Building Permits...
+2026-08-20 08:33:02,666 | INFO | Opening Green Sheet Permits...
+2026-08-20 08:33:04,929 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 08:33:04,932 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 08:33:04,949 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 08:33:04,950 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 08:33:05,321 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 08:33:05,341 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 08:33:05,341 | INFO | Opening Permit export...
+2026-08-20 08:33:05,575 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-083305.xls
+2026-08-20 08:33:05,575 | INFO | Normalizing Projects...
+2026-08-20 08:33:05,660 | INFO | Projects found: 0
+2026-08-20 08:33:05,661 | INFO | Normalizing Permits...
+2026-08-20 08:33:05,699 | INFO | Permits found: 0
+2026-08-20 08:33:05,700 | ERROR | Green Sheet import FAILED: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 160, in main
+    database.connect()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\database.py", line 45, in connect
+    self.connection = pyodbc.connect(
+                      ~~~~~~~~~~~~~~^
+        connection_string
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.InterfaceError: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+2026-08-20 08:33:05,701 | INFO | Closing browser...
+2026-08-20 08:34:59,776 | INFO | ======================================
+2026-08-20 08:34:59,776 | INFO | Starting Green Sheet weekly import
+2026-08-20 08:34:59,777 | INFO | Starting Chromium...
+2026-08-20 08:35:00,375 | INFO | Logging into Green Sheet...
+2026-08-20 08:35:02,322 | INFO | Fetching Projects...
+2026-08-20 08:35:02,322 | INFO | Opening Green Sheet Projects...
+2026-08-20 08:35:02,983 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 08:35:02,983 | INFO | Opening All Projects results...
+2026-08-20 08:35:05,978 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 08:35:05,978 | INFO | Opening Excel / CSV export page...
+2026-08-20 08:35:06,236 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 08:35:07,740 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 08:35:07,875 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 08:35:07,875 | INFO | Starting final Projects download...
+2026-08-20 08:35:08,401 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-083508.xls
+2026-08-20 08:35:08,401 | INFO | Fetching Building Permits...
+2026-08-20 08:35:08,401 | INFO | Opening Green Sheet Permits...
+2026-08-20 08:35:10,639 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 08:35:10,642 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 08:35:10,660 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 08:35:10,660 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 08:35:11,014 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 08:35:11,033 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 08:35:11,033 | INFO | Opening Permit export...
+2026-08-20 08:35:11,280 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-083511.xls
+2026-08-20 08:35:11,280 | INFO | Normalizing Projects...
+2026-08-20 08:35:11,362 | INFO | Projects found: 0
+2026-08-20 08:35:11,362 | INFO | Normalizing Permits...
+2026-08-20 08:35:11,392 | INFO | Permits found: 0
+2026-08-20 08:35:11,393 | ERROR | Green Sheet import FAILED: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 160, in main
+    database.connect()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\database.py", line 45, in connect
+    self.connection = pyodbc.connect(
+                      ~~~~~~~~~~~~~~^
+        connection_string
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.InterfaceError: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+2026-08-20 08:35:11,394 | INFO | Closing browser...
+2026-08-20 08:37:48,446 | INFO | ======================================
+2026-08-20 08:37:48,447 | INFO | Starting Green Sheet weekly import
+2026-08-20 08:37:48,447 | INFO | Starting Chromium...
+2026-08-20 08:37:49,039 | INFO | Logging into Green Sheet...
+2026-08-20 08:37:53,042 | INFO | Fetching Projects...
+2026-08-20 08:37:53,042 | INFO | Opening Green Sheet Projects...
+2026-08-20 08:37:53,532 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 08:37:53,532 | INFO | Opening All Projects results...
+2026-08-20 08:37:56,278 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 08:37:56,278 | INFO | Opening Excel / CSV export page...
+2026-08-20 08:37:56,538 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 08:37:58,039 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 08:37:58,164 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 08:37:58,164 | INFO | Starting final Projects download...
+2026-08-20 08:37:58,709 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-083758.xls
+2026-08-20 08:37:58,710 | INFO | Fetching Building Permits...
+2026-08-20 08:37:58,710 | INFO | Opening Green Sheet Permits...
+2026-08-20 08:38:00,951 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 08:38:00,953 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 08:38:00,968 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 08:38:00,969 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 08:38:01,331 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 08:38:01,349 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 08:38:01,349 | INFO | Opening Permit export...
+2026-08-20 08:38:01,599 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-083801.xls
+2026-08-20 08:38:01,599 | INFO | Normalizing Projects...
+2026-08-20 08:38:01,713 | INFO | Projects found: 136
+2026-08-20 08:38:01,713 | INFO | Normalizing Permits...
+2026-08-20 08:38:01,746 | INFO | Permits found: 36
+2026-08-20 08:38:01,748 | ERROR | Green Sheet import FAILED: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 160, in main
+    database.connect()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\database.py", line 45, in connect
+    self.connection = pyodbc.connect(
+                      ~~~~~~~~~~~~~~^
+        connection_string
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.InterfaceError: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+2026-08-20 08:38:01,748 | INFO | Closing browser...
+2026-08-20 08:43:33,264 | INFO | ======================================
+2026-08-20 08:43:33,264 | INFO | Starting Green Sheet weekly import
+2026-08-20 08:43:33,264 | INFO | Starting Chromium...
+2026-08-20 08:43:33,909 | INFO | Logging into Green Sheet...
+2026-08-20 08:43:37,800 | INFO | Fetching Projects...
+2026-08-20 08:43:37,800 | INFO | Opening Green Sheet Projects...
+2026-08-20 08:43:38,322 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 08:43:38,322 | INFO | Opening All Projects results...
+2026-08-20 08:43:41,077 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 08:43:41,077 | INFO | Opening Excel / CSV export page...
+2026-08-20 08:43:41,343 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 08:43:42,854 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 08:43:42,983 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 08:43:42,984 | INFO | Starting final Projects download...
+2026-08-20 08:43:43,525 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-084343.xls
+2026-08-20 08:43:43,526 | INFO | Fetching Building Permits...
+2026-08-20 08:43:43,526 | INFO | Opening Green Sheet Permits...
+2026-08-20 08:43:45,756 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 08:43:45,758 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 08:43:45,777 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 08:43:45,777 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 08:43:46,158 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 08:43:46,184 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 08:43:46,184 | INFO | Opening Permit export...
+2026-08-20 08:43:46,429 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-084346.xls
+2026-08-20 08:43:46,429 | INFO | Normalizing Projects...
+2026-08-20 08:43:46,523 | INFO | Projects found: 136
+2026-08-20 08:43:46,524 | INFO | Normalizing Permits...
+2026-08-20 08:43:46,555 | INFO | Permits found: 36
+2026-08-20 08:43:46,555 | INFO | Creating Projects CSV...
+2026-08-20 08:43:46,555 | ERROR | Green Sheet import FAILED: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 242, in main
+    save_records_to_csv(
+    ~~~~~~~~~~~~~~~~~~~^
+        projects,
+        ^^^^^^^^^
+        project_csv
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 75, in save_records_to_csv
+    if not records:
+           ^^^^^^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 1501, in __bool__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-08-20 08:43:46,561 | INFO | Closing browser...
+2026-08-20 08:44:42,562 | INFO | ======================================
+2026-08-20 08:44:42,562 | INFO | Starting Green Sheet weekly import
+2026-08-20 08:44:42,562 | INFO | Starting Chromium...
+2026-08-20 08:44:43,197 | INFO | Logging into Green Sheet...
+2026-08-20 08:44:45,010 | INFO | Fetching Projects...
+2026-08-20 08:44:45,011 | INFO | Opening Green Sheet Projects...
+2026-08-20 08:44:45,511 | INFO | Member page loaded: https://greensheet.ca/members/main-menu.php
+2026-08-20 08:44:45,511 | INFO | Opening All Projects results...
+2026-08-20 08:44:48,224 | INFO | Projects results loaded: https://greensheet.ca/members/project_results.php?button_clicked=btn_basic&do=projectsall
+2026-08-20 08:44:48,225 | INFO | Opening Excel / CSV export page...
+2026-08-20 08:44:48,513 | INFO | Export page loaded: https://greensheet.ca/members/project_set_output.php?button_clicked=btn_basic&do=projectsall&issue_select=2026-08-19
+2026-08-20 08:44:50,016 | INFO | Looking for final CSV/Excel download control...
+2026-08-20 08:44:50,145 | INFO | Export candidate 16: text='Download Excel' href='' id='viewexcel' name=''
+2026-08-20 08:44:50,145 | INFO | Starting final Projects download...
+2026-08-20 08:44:50,653 | INFO | Projects saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-084450.xls
+2026-08-20 08:44:50,653 | INFO | Fetching Building Permits...
+2026-08-20 08:44:50,653 | INFO | Opening Green Sheet Permits...
+2026-08-20 08:44:52,888 | INFO | Permits page loaded: https://greensheet.ca/members/zone_results.php?zone=zoneall&SEARCH_x=Advanced+Search&override=yes&city_select%5B%5D=&ptype_select%5B%5D=71&ptype_select%5B%5D=26&ptype_select%5B%5D=24&owner_select=&address_select=&amount1=0&amount2=0&issue_select=now&issue_select2=now&feedname=
+2026-08-20 08:44:52,891 | INFO | Permit page title: Greensheet Construction Data
+2026-08-20 08:44:52,907 | INFO | Permit page text preview: "Home\nMy Data \nContact\nLogoff\nBuilding Permits\nAll Subscribed Zones\n Thursday, August 20, 2026\nBuilding Permits - Advanced Search\nRefine Search  | Map  Excel  CSV  Stats  36 results\nSave \nList: \n-None-\nDQ's\nJohnny - 2026\nRyan - To Review\nTaylor - 2026\n Show  Create \nProject Type:\nmulti-family new, multi-family add/alter, mixed-use dev\nEstimated Value:\n$0 to $0\nDate Range:\nLatest issue to Latest issue\n\n\nBuilding Permits \nNewly issued permits across your subscribed zones\n36\n   \n$1,500,000\nAug 19, 2026\nAddress:\nVancouver - 2129 W 57 Ave \nType:\nmulti-family new - multiplex, front bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@architrix.com \nContractor:\nJamsher Builders Ltd - 140 709 SE Marine Dr, Vancouver V4C\xa03J4 604-376-5000 \nNote:\n   \n$1,000,000\nAug 19, 2026\nAddress:\nVancouver - 2131 W 57 Ave \nType:\nmulti-family new - multiplex, rear bldg\nApplicant:\nArchitrix Design Studio - 216 289 Alexander St, Vancouver V6A\xa04H6 604-677-7877  info@a"
+2026-08-20 08:44:52,907 | INFO | Looking for Permits Excel / CSV export...
+2026-08-20 08:44:53,282 | INFO | Permit export candidate 21: text='Excel' href='' id='viewexcel' name='' onclick='javascript:ChangeSubmit(2); return false;'
+2026-08-20 08:44:53,301 | INFO | Permit export outerHTML: <a onclick="javascript:ChangeSubmit(2); return false;" class="btn btn-labeled btn-zone4" id="viewexcel">
+					Excel
+					<span class="btn-label-right glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					</a>
+2026-08-20 08:44:53,301 | INFO | Opening Permit export...
+2026-08-20 08:44:53,544 | INFO | Permits saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-084453.xls
+2026-08-20 08:44:53,544 | INFO | Normalizing Projects...
+2026-08-20 08:44:53,634 | INFO | Projects found: 136
+2026-08-20 08:44:53,634 | INFO | Normalizing Permits...
+2026-08-20 08:44:53,667 | INFO | Permits found: 36
+2026-08-20 08:44:53,667 | INFO | Creating Projects CSV...
+2026-08-20 08:44:53,682 | INFO | Projects CSV saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\projects-20260820-084453.csv
+2026-08-20 08:44:53,683 | INFO | Creating Permits CSV...
+2026-08-20 08:44:53,685 | INFO | Permits CSV saved to C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\downloads\permits-20260820-084453.csv
+2026-08-20 08:44:53,686 | ERROR | Green Sheet import FAILED: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+Traceback (most recent call last):
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\main.py", line 250, in main
+    database.connect()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mxudo\AppData\Local\Programs\Python\Python313\greensheet\database.py", line 45, in connect
+    self.connection = pyodbc.connect(
+                      ~~~~~~~~~~~~~~^
+        connection_string
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.InterfaceError: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+2026-08-20 08:44:53,688 | INFO | Closing browser...

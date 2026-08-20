@@ -1,0 +1,4 @@
+playwright
+pandas
+pyodbc
+python-dotenv
